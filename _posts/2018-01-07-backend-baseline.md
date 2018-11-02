@@ -2,9 +2,8 @@
 layout: post
 title:  "后台服务架构基线"
 author: kevin
-categories: backend
-tags:  server baseline
-excerpt: 
+categories: 架构
+tags:  架构 server baseline
 ---
 
 * content

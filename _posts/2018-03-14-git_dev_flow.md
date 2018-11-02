@@ -2,7 +2,7 @@
 layout: post
 title:  "git协同工作的几种方式"
 author: kevin
-categories: git
+categories: 流程
 tags: git workflow
 excerpt: 
 ---

@@ -2,9 +2,8 @@
 layout: post
 title:  "程序中的错误处理"
 author: kevin
-categories: backend
+categories: 设计
 tags: error code
-excerpt: 
 ---
 
 * content

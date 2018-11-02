@@ -6,6 +6,10 @@ categories: DevOps
 tags: DevOps 微服务 Cloud 流水线 Pipline
 excerpt: 
 ---
+* content
+{:toc}
+
+
 
 #### 前言
 DevOps的概念如今常被提及，特别是随着微服务及容器化技术普及至大众视线后。它到底是一个新技术呢，还是新瓶装旧酒的一种包装？能给我们带来怎么样的改变？本文尝试初浅解答一二。

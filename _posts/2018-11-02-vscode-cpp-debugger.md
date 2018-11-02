@@ -4,14 +4,15 @@ title:  "OSX中VSCode C++编译调试环境搭建"
 author: kevin
 categories: tools
 tags: vscode c++ debugger
-excerpt: 
 ---
+* content
+{:toc}
 
 #### 说明
 * 系统： OSX 10.13.6
 * VSCode: 1.28.0
 
-####插件
+#### 插件
 安装以下插件。版本号仅供参考。
 * C/C++ cpptools （0.20.1）
 	* C/C++ IntelliSense, debugging, and code browsing.
@@ -21,10 +22,10 @@ excerpt:
 	* C/C++ IntelliSense, debugging, and code browsing.
 	* 只安装上面两个时，提供的lldb-mi似乎有bug
 
-####配置
+#### 配置
 * 全局C/CPP配置。F1命令模式输入：`C/Cpp: Edit Configurations`
 编辑文件，如下：
-```
+```js
 {
     "configurations": [
         {
@@ -51,7 +52,7 @@ excerpt:
 注意，以上includePath用于头文件查找跳转等，看具体情况可修改。
 
 * 配置tasks.json。 命令模式下，`Tasks: Configure Task`
-```
+```js
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
@@ -79,7 +80,7 @@ excerpt:
 ```
 
 * 配置launch.json。这里使用lldb进行调试。
-```
+```js
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -115,7 +116,7 @@ All rights reserved.
 然后配置上述`miDebuggerPath` 编译及调试功能即OK。
 
 #### 示例图
-[图片]![Alt text](./assets/201811/vscode-cpp-debugger.png)
+![Alt text](/assets/201811/vscode-cpp-debugger.png)
 
 
 

@@ -6,6 +6,9 @@ categories: vim vim
 tags: ctags vim
 excerpt: 
 ---
+* content
+{:toc}
+
 #### 基本使用
 对于vim党，coding时比较常见使用ctags进行代码跳转。
 一般生成tags的命令形如：
