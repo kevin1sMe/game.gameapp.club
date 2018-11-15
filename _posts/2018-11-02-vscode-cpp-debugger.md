@@ -43,13 +43,16 @@ tags: vscode c++ debugger
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "clang-x64", 
+            "compileCommands:": "THE_CMAKE_COMPILE_COMMANDS.json"
+
         }
     ],
     "version": 4
 }
 ```
 注意，以上includePath用于头文件查找跳转等，看具体情况可修改。
+其中compileCommands用于帮助VSCode在源码中各种合理跳转。可以由CMake在编译时添加参数`CMAKE_EXPORT_COMPILE_COMMANDS`来生成对应的json文件，用实际路径替换它。
 
 * 配置tasks.json。 命令模式下，`Tasks: Configure Task`
 ```js
