@@ -66,3 +66,5 @@ excerpt_separator: "\n\n\n\n"
 # paginate
 plugins: [jekyll-paginate]
 paginate: 6
+
+theme: jekyll-theme-time-machine
