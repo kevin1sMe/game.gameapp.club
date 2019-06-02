@@ -10,11 +10,14 @@ tags: docker
 
 > 目前对于项目中构建镜像较慢的问题，经常让人等的着急。是目录结构安排的不合理，还是手法的不准确？
 
-经常的构建一个镜像在发送Context至daemon花费大量时间，这个过程在官方文档中提到了[dockerignore](https://docs.docker.com/engine/reference/builder/)有说明,
+经常的构建一个镜像在发送Context至daemon花费大量时间，这个过程在官方文档[build镜像](https://docs.docker.com/engine/reference/builder/)中有说明,
 不过比较简要。在构建镜像时，需要向docker引擎发送上下文，比如你执行`docker bulid -t img:tag -f Dockerfile . `时，便会默认将当前目录下的所有文件都发向引擎。
-这显然在很多时候都是无必要的，优化空间巨大。
+这显然在很多时候都是无必要的，优化空间巨大。官方此时提到了`dockerignore`文件，没错！它就是今天的主角。
 
 我们知道一个Dockerfile它依赖的文件是可预期的。一般来说所在`ADD`和`COPY`命令的东西，都是构建时需要的。所以优化关键是以白名单模式去代替`dockerignore`的黑名单。默认禁掉所有文件，只有从Dockerfile中提取到的文件才能加入Context。
+
+所以只要在准备构建镜像前，动态去计算并生成准确的`.dockerignore`文件，便可以使构建过程提速。具体提速效果视项目工程而定，显然它是有百利而无一害的。
+
 
 最终的脚本很简单。 当然为了便利添加了一些小特性。
 执行:
@@ -23,6 +26,11 @@ tags: docker
 即可快速在当前目录查找名为Dockerfile-[shortname]的Dockerfile然后构建出名为shortname:tag的镜像。
 
 文末直接附上源码。
+
+话说同时有几个疑点，欢迎留言探讨。  
+
+1. 目录层级：项目中如果构建dockerfile中依赖的包在公共目录，它的层级较上，这时使用软链接方式似乎docker构建报错，只能在上层去build?
+1.  Dockerfile本身：对于某些命令，我们可以放在Dockerfile中使用RUN或者CMD去执行，也可以在镜像启动时通过入口执行脚本方式去做。比如说corefile的开启，需要修改系统的某些文件。类似这种工作，应试归属于哪个步骤更加合理呢？
 
 ```shell
 #!/bin/bash
