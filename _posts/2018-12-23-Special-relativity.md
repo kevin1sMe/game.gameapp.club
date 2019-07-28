@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "狭义相对论概览"
-author: kevin
 categories: science
 tags: physical
+author: kevin
+mathjax: true
 ---
 * content
 {:toc}
