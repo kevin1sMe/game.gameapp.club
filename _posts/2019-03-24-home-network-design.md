@@ -3,7 +3,7 @@ layout: post
 title:  "重构家庭网络"
 author: kevin
 categories: network
-tags: network;ap;ac
+tags: network ap ac
 ---
 * content
 {:toc}

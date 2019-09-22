@@ -3,7 +3,7 @@ layout: post
 title:  "python中优雅打印protobuf"
 author: kevin
 categories: python
-tags: python;protobuf;text-format
+tags: python protobuf text-format
 ---
 * content
 {:toc}

@@ -3,7 +3,7 @@ layout: post
 title:  "vim配置golang开发环境"
 author: kevin
 categories: vim
-tags: vim;golang;IDE
+tags: vim golang IDE
 ---
 * content
 {:toc}

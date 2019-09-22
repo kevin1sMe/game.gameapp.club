@@ -2,8 +2,8 @@
 layout: post
 title:  "二级路由LEDE助力全家出国游"
 author: kevin
-categories: nas
-tags: nas;lede;openwrt;ss;ssr
+categories: network
+tags: nas lede openwrt ssr
 ---
 * content
 {:toc}
@@ -49,7 +49,6 @@ tags: nas;lede;openwrt;ss;ssr
 ![Alt Text](/assets/201909/nas-lede-05.png)
 
 1. 打开主路由界面，设置DHCP的一些属性（拨号那些我就不讲啦）
-![30c5961e67ff86cdc110a62b373772cb.png](evernotecid://1A26A2C9-D9C0-47AE-AB96-6C52D60D6EE6/appyinxiangcom/8166302/ENResource/p14997)
 ![Alt Text](/assets/201909/nas-lede-06.png)
 
 以上设置完毕，所以连接上来的设备都会被DHCP分配并且把默认的网关及DNS设置为我们LEDE的地址。
