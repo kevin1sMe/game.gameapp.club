@@ -58,7 +58,7 @@ tags: nas;lede;openwrt;ss;ssr
 
 如果你不需要全家出国游，那么可以不设置DHCP中的网关地址和DNS到LEDE，使用默认的这些流量就不会经过LEDE了。而对于需要的设备手动设置这两项为LEDE的IP即可。
 
-最近附上正常运行的LEDE状态，负载还是相对较低的（听说ROS更是节省资源）
+最后附上正常运行的LEDE状态，负载还是相对较低的（听说ROS更是节省资源）
 ![Alt Text](/assets/201909/nas-lede-01.png)
 
 
